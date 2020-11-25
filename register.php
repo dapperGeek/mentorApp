@@ -5,30 +5,30 @@ include 'views/header.php';
         <h1>Sign up</h1>
         <div class="container">
             <div class="sign-up-content">
-                <form method="POST" class="signup-form">
+                <form onsubmit="registerUser(); return false" method="POST" class="signup-form">
                     <h2 class="form-title">What type of user are you ?</h2>
-                    <div class="form-radio">
+                    <div class="form-textbox">
                         
-                        <input type="radio" name="user_level" value="mentee" id="average" />
-                        <label for="average">Mentee</label>
-
-                        <input type="radio" name="user_level" value="mentor" id="master" />
-                        <label for="master">Mentor</label>
+                        <label for="name">Account Type</label>
+                        <select name="user_level" class="user_level" id="user_level">
+                            <option value="1">Mentor</option>
+                            <option value="2">Mentee</option>
+                        </select>
                     </div>
 
                     <div class="form-textbox">
                         <label for="name">Full name</label>
-                        <input type="text" name="name" id="name" />
+                        <input required type="text" name="name" id="name" />
                     </div>
 
                     <div class="form-textbox">
                         <label for="username">Username</label>
-                        <input type="text" name="username" id="username" />
+                        <input required type="text" name="username" id="username" />
                     </div>
 
                     <div class="form-textbox">
                         <label for="pass">Password</label>
-                        <input type="password" name="password" id="password" />
+                        <input required type="password" name="password" id="password" />
                     </div>
 
                     <div class="form-group">

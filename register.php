@@ -1,5 +1,6 @@
 <?php
 include 'views/header.php';
+include 'includes/login_redirect.php';
 ?>
 
         <h1>Sign up</h1>
@@ -8,12 +9,11 @@ include 'views/header.php';
                 <form onsubmit="registerUser(); return false" method="POST" class="signup-form">
                     <h2 class="form-title">What type of user are you ?</h2>
                     <div class="form-textbox">
-                        
                         <label for="name">Account Type</label>
-                        <select name="user_level" class="user_level" id="user_level">
-                            <option value="1">Mentor</option>
-                            <option value="2">Mentee</option>
-                        </select>
+                            <select name="user_level" class="user_level" id="user_level">
+                                <option value="1">Mentor</option>
+                                <option value="2">Mentee</option>
+                            </select>
                     </div>
 
                     <div class="form-textbox">

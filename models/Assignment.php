@@ -12,11 +12,22 @@
  * @author DapperGeek0
  */
 class Assignment {
-    protected int $mentorID, $menteeID;
+    protected $mentorID;
+    protected $menteeID;
     
     public function __construct(int $mentorID, int $menteeID)
     {
         $this->mentorID = $mentorID;
         $this->menteeID = $menteeID;
+    }
+
+    public function getMentorID()
+    {
+        return $this->mentorID;
+    }
+
+    public function getMenteeID()
+    {
+        return $this->menteeID;
     }
 }
